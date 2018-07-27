@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/DP_200"
+    android:orientation="horizontal"
+    android:weightSum="100">
+
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="10"
+        android:text="CardNo"
+        android:id="@+id/CardNo_value_txt"
+        android:textSize="@dimen/DP_10"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="#616161"
+        android:background="@drawable/cell_shape_for_data" />
+
+    <TextView
+        android:id="@+id/CustomerName_value_txt"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="30"
+        android:text="Customer Name"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="@dimen/DP_10"
+        android:textColor="#616161"
+        android:background="@drawable/cell_shape_for_data" />
+
+    <TextView
+        android:id="@+id/Date_value_txt"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="20"
+        android:text="Date"
+        android:textSize="@dimen/DP_10"
+        android:textColor="#616161"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:background="@drawable/cell_shape_for_data" />
+
+    <TextView
+        android:id="@+id/Total_Amount_value_txt"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="20"
+        android:text="Total Amount"
+        android:textSize="@dimen/DP_10"
+        android:textColor="#616161"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:background="@drawable/cell_shape_for_data" />
+
+    <TextView
+        android:id="@+id/User_name_value_txt"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="20"
+        android:text="User Name"
+        android:textSize="@dimen/DP_10"
+        android:textColor="#616161"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:background="@drawable/cell_shape_for_data" />
+
+
+</LinearLayout>

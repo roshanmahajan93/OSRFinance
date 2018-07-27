@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mainRelative"
+    tools:context="com.example.chetu.osrfinance.Activity.SearchListActivity">
+
+    <EditText
+        android:id="@+id/search_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Search Customer Name"
+        android:drawableRight="@drawable/search_icon"
+        android:imeOptions="actionNext"
+        android:inputType="textAutoComplete"
+        android:singleLine="true"
+        android:padding="@dimen/DP_15"
+
+        android:focusable="true" />
+
+    <LinearLayout
+        android:id="@+id/linear2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="100"
+        android:layout_below="@+id/search_et">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="15"
+            android:text="CardNo"
+            android:textSize="@dimen/DP_10"
+            android:gravity="center"
+            android:textColor="#ffff"
+            android:background="@drawable/cell_shape" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="60"
+            android:text="Customer Name"
+            android:gravity="center"
+            android:textSize="@dimen/DP_10"
+            android:textColor="#ffff"
+            android:background="@drawable/cell_shape" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="25"
+            android:text="Amount"
+            android:textSize="@dimen/DP_10"
+            android:textColor="#ffff"
+            android:gravity="center"
+            android:background="@drawable/cell_shape" />
+
+        />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear2"
+
+
+        >
+
+    </ListView>
+
+</RelativeLayout>

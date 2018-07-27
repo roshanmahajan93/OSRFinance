@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    android:id="@+id/LinearLayoutmain">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutUserDeskTop"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/holo_red"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Daily Entry"
+            android:textColor="@color/white_color"
+            android:id="@+id/textView3"
+            android:textSize="20dp"
+            android:layout_marginLeft="@dimen/DP_20"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/DP_10"
+            android:paddingRight="@dimen/DP_10">
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="@dimen/DP_100"
+                android:layout_height="@dimen/DP_55"
+                android:layout_marginTop="@dimen/DP_10"
+                android:paddingTop="@dimen/DP_5"
+                android:textColorHint="#838383"
+                android:gravity="bottom"
+                android:clipToPadding="false"
+                android:layout_gravity="center_horizontal">
+
+                <EditText
+                    android:id="@+id/et_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Date"
+                    android:gravity="center_horizontal"
+                    android:background="@drawable/cell_shape_for_edittext"
+                    android:textSize="@dimen/DP_15" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/DP_55"
+                android:paddingTop="@dimen/DP_5"
+                android:textColorHint="#838383"
+                android:gravity="bottom"
+                android:clipToPadding="false">
+
+                <EditText
+                    android:id="@+id/et_cardNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Card No"
+                    android:background="@drawable/cell_shape_for_edittext"
+                    android:textSize="@dimen/DP_15"
+                    android:inputType="numberDecimal" />
+            </android.support.design.widget.TextInputLayout>
+
+            <LinearLayout
+                android:id="@+id/dailyvehanaLinearLayoutForCardNo"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/login_bg"
+                    android:layout_gravity="center|end"
+                    android:visibility="gone"
+                    android:id="@+id/lstDailyVehParaCardNo" />
+            </LinearLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/DP_55"
+                android:paddingTop="@dimen/DP_5"
+                android:textColorHint="#838383"
+                android:gravity="bottom"
+                android:clipToPadding="false">
+
+                <EditText
+                    android:id="@+id/et_custName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Name"
+                    android:background="@drawable/cell_shape_for_edittext"
+                    android:textSize="@dimen/DP_15" />
+            </android.support.design.widget.TextInputLayout>
+
+            <LinearLayout
+                android:id="@+id/dailyvehanaLinearLayoutForCustName"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/login_bg"
+                    android:layout_gravity="center|end"
+                    android:visibility="gone"
+                    android:id="@+id/lstDailyVehParaVehNameCustName" />
+            </LinearLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/DP_55"
+                android:paddingTop="@dimen/DP_5"
+                android:textColorHint="#838383"
+                android:gravity="bottom"
+                android:clipToPadding="false">
+
+                <EditText
+                    android:id="@+id/et_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Amount"
+                    android:background="@drawable/cell_shape_for_edittext"
+                    android:textSize="@dimen/DP_15"
+                    android:inputType="numberDecimal" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/DP_55"
+                android:paddingTop="@dimen/DP_5"
+                android:textColorHint="#838383"
+                android:gravity="bottom"
+                android:clipToPadding="false">
+
+                <EditText
+                    android:id="@+id/et_penalty"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Fine/Penalty"
+                    android:background="@drawable/cell_shape_for_edittext"
+                    android:textSize="@dimen/DP_15"
+                    android:inputType="numberDecimal" />
+            </android.support.design.widget.TextInputLayout>
+
+            <RelativeLayout
+                android:id="@+id/btnlinear"
+                android:layout_below="@+id/changeval"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btn_yes"
+                    android:layout_width="@dimen/DP_100"
+                    android:layout_height="wrap_content"
+                    android:text="Submit"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:textColor="#ffffff"
+                    android:background="@color/holo_red"
+                    android:gravity="center_horizontal"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="@dimen/DP_10"
+                    android:layout_marginRight="@dimen/DP_5"
+                    android:layout_marginBottom="@dimen/DP_10"
+                    android:layout_marginTop="@dimen/DP_30"
+                    android:padding="10dp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.example.chetu.osrfinance.Activity.CustomerFinanceDetailActivity">
+
+
+    <LinearLayout
+        android:id="@+id/mainLinear"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        >
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutUserDeskTop"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/holo_red"
+            android:layout_alignParentTop="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Customer Finance Detail"
+                android:textColor="@color/white_color"
+                android:id="@+id/textView3"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="@dimen/DP_10"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relativeLayoutUserDeskTop">
+
+            <TextView
+                android:id="@+id/txt_card_no_lable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Card No :"
+                android:textSize="@dimen/DP_15"
+                android:layout_marginTop="@dimen/DP_10"
+                android:padding="@dimen/DP_5"
+                android:textColor="@color/black_color"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_card_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Card No"
+                android:textSize="@dimen/DP_15"
+                android:layout_marginTop="@dimen/DP_10"
+                android:padding="@dimen/DP_5"
+                android:layout_toRightOf="@+id/txt_card_no_lable" />
+
+
+            <TextView
+                android:id="@+id/txt_CustName_lable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Customer Name :"
+                android:textSize="@dimen/DP_15"
+                android:layout_marginTop="@dimen/DP_5"
+                android:layout_below="@+id/txt_card_no"
+                android:padding="@dimen/DP_5"
+                android:textColor="@color/black_color"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_CustName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Customer Name"
+                android:textSize="@dimen/DP_15"
+                android:layout_marginTop="@dimen/DP_5"
+                android:layout_below="@+id/txt_card_no"
+                android:padding="@dimen/DP_5"
+                android:layout_toRightOf="@+id/txt_CustName_lable" />
+
+            <TextView
+                android:id="@+id/txt_ContactNo_lable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contact No :"
+                android:textSize="@dimen/DP_15"
+                android:layout_marginTop="@dimen/DP_5"
+                android:layout_below="@+id/txt_CustName"
+                android:padding="@dimen/DP_5"
+                android:textColor="@color/black_color"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_ContactNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ContactNo"
+                android:textSize="@dimen/DP_15"
+                android:layout_marginTop="@dimen/DP_5"
+                android:layout_below="@+id/txt_CustName"
+                android:padding="@dimen/DP_5"
+                android:layout_toRightOf="@+id/txt_ContactNo_lable" />
+
+            <TextView
+                android:id="@+id/txt_Amount_lable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Amount :"
+                android:textSize="@dimen/DP_15"
+                android:layout_marginTop="@dimen/DP_5"
+                android:layout_below="@+id/txt_ContactNo"
+                android:padding="@dimen/DP_5"
+                android:textColor="@color/black_color"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_Amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Amount"
+                android:textSize="@dimen/DP_15"
+                android:layout_marginTop="@dimen/DP_5"
+                android:layout_below="@+id/txt_ContactNo"
+                android:padding="@dimen/DP_5"
+                android:layout_toRightOf="@+id/txt_Amount_lable" />
+
+
+            <TextView
+                android:id="@+id/txt_DailyAmt_lable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Daily Amount :"
+                android:textSize="@dimen/DP_15"
+                android:layout_marginTop="@dimen/DP_5"
+                android:layout_toRightOf="@+id/txt_Amount"
+                android:padding="@dimen/DP_5"
+                android:textColor="@color/black_color"
+                android:textStyle="bold"
+                android:layout_marginLeft="@dimen/DP_5"
+                android:layout_below="@+id/txt_ContactNo_lable" />
+
+            <TextView
+                android:id="@+id/txt_DailyAmt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DailyAmt"
+                android:textSize="@dimen/DP_15"
+                android:layout_marginTop="@dimen/DP_5"
+                android:layout_below="@+id/txt_ContactNo_lable"
+                android:padding="@dimen/DP_5"
+                android:layout_toRightOf="@+id/txt_DailyAmt_lable" />
+
+            <TextView
+                android:id="@+id/txt_AmtDate_lable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Amount Date :"
+                android:textSize="@dimen/DP_15"
+                android:layout_marginTop="@dimen/DP_5"
+                android:layout_below="@+id/txt_Amount_lable"
+                android:padding="@dimen/DP_5"
+                android:textColor="@color/black_color"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_AmtDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="AmtDate"
+                android:textSize="@dimen/DP_15"
+                android:layout_marginTop="@dimen/DP_5"
+                android:layout_below="@+id/txt_Amount_lable"
+                android:padding="@dimen/DP_5"
+                android:layout_toRightOf="@+id/txt_AmtDate_lable" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/LinearLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_below="@+id/relativeLayout2"
+            android:layout_marginTop="@dimen/DP_10">
+
+            <LinearLayout
+                android:id="@+id/linear2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="100"
+
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="10"
+                    android:text="Sr.No."
+                    android:textSize="@dimen/DP_10"
+                    android:gravity="center"
+                    android:textColor="#ffff"
+                    android:background="@drawable/cell_shape" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="15"
+                    android:text="Date"
+                    android:gravity="center"
+                    android:textSize="@dimen/DP_10"
+                    android:textColor="#ffff"
+                    android:background="@drawable/cell_shape" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="15"
+                    android:text="Amount"
+                    android:textSize="@dimen/DP_10"
+                    android:textColor="#ffff"
+                    android:gravity="center"
+                    android:background="@drawable/cell_shape" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="20"
+                    android:text="Fine/Penalty"
+                    android:textSize="@dimen/DP_10"
+                    android:textColor="#ffff"
+                    android:gravity="center"
+                    android:background="@drawable/cell_shape" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="40"
+                    android:text="Remark"
+                    android:textSize="@dimen/DP_10"
+                    android:textColor="#ffff"
+                    android:gravity="center"
+                    android:background="@drawable/cell_shape" />
+
+                />
+
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/list_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear2"></ListView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

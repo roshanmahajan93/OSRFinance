@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.chetu.osrfinance.Activity.TwoDaysAndFiftyDaysReportActivity">
+
+    <TextView
+        android:id="@+id/txt_total_customer_Count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Customer : "
+        android:textSize="@dimen/DP_20"
+        android:textStyle="bold"
+        android:layout_marginLeft="@dimen/DP_10"
+        android:layout_marginBottom="@dimen/DP_10"
+        android:layout_marginTop="@dimen/DP_10"
+        android:textColor="@color/black_color" />
+
+    <TextView
+        android:id="@+id/txt_total_customer_Count_Value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Value "
+        android:textSize="@dimen/DP_18"
+        android:layout_toRightOf="@+id/txt_total_customer_Count"
+        android:layout_marginTop="@dimen/DP_12" />
+
+    <LinearLayout
+        android:id="@+id/LinearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/txt_total_customer_Count">
+
+        <LinearLayout
+            android:id="@+id/linear2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="100"
+
+            >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="6"
+                android:text="Card No"
+                android:textSize="@dimen/DP_10"
+                android:gravity="center"
+                android:textColor="#ffff"
+                android:background="@drawable/cell_shape" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="20"
+                android:text="Name"
+                android:gravity="center"
+                android:textSize="@dimen/DP_10"
+                android:textColor="#ffff"
+                android:background="@drawable/cell_shape" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="12"
+                android:text="Contact No"
+                android:textSize="@dimen/DP_10"
+                android:textColor="#ffff"
+                android:gravity="center"
+                android:background="@drawable/cell_shape" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="10"
+                android:text="No of Days Pending"
+                android:textSize="@dimen/DP_10"
+                android:textColor="#ffff"
+                android:gravity="center"
+                android:background="@drawable/cell_shape" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="10"
+                android:text="Daily"
+                android:textSize="@dimen/DP_10"
+                android:textColor="#ffff"
+                android:gravity="center"
+                android:background="@drawable/cell_shape" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="12"
+                android:text="Amount"
+                android:textSize="@dimen/DP_10"
+                android:textColor="#ffff"
+                android:gravity="center"
+                android:background="@drawable/cell_shape" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="18"
+                android:text="Guarantor Name"
+                android:textSize="@dimen/DP_10"
+                android:textColor="#ffff"
+                android:gravity="center"
+                android:background="@drawable/cell_shape" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="12"
+                android:text="Guarantor Contact"
+                android:textSize="@dimen/DP_10"
+                android:textColor="#ffff"
+                android:gravity="center"
+                android:background="@drawable/cell_shape" />
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/list_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linear2"></ListView>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,81 @@
+<RelativeLayout android:id="@+id/relativeLayoutUSerDesk"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserDesk"
+    android:background="@drawable/osrbackground">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutUserDeskTop"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@android:color/transparent"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Home"
+            android:textColor="@color/white_color"
+            android:id="@+id/textView3"
+            android:textSize="20dp"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true" />
+
+        <ImageButton
+            android:id="@+id/imgBtn_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/logout_icon"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/DP_15"
+            android:background="@android:color/transparent" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutUserDeskTwo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relativeLayoutUserDeskTop"
+        android:background="@drawable/home_screen_bg"
+        android:layout_marginTop="@dimen/DP_10"
+        android:layout_marginBottom="@dimen/DP_20">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutUserDesk"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="1"
+            android:layout_centerInParent="true"
+            android:background="@android:color/transparent">
+
+            <GridView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/gridView"
+                android:columnWidth="40dp"
+                android:layout_weight="1"
+                android:numColumns="2"
+                android:background="@android:color/transparent"
+                android:verticalSpacing="10dp"
+                android:horizontalSpacing="5dp"
+                android:stretchMode="columnWidth"
+
+                android:layout_marginLeft="@dimen/DP_30"
+                android:layout_marginRight="@dimen/DP_30"
+                android:layout_marginTop="@dimen/DP_30" />
+
+        </LinearLayout>
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/pbUserDesk"
+            android:visibility="gone"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,18 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/holo_red</item>
+        <item name="colorPrimaryDark">@color/holo_red</item>
+        <item name="colorAccent">#393939</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="colorControlNormal">#ffff</item>
+    </style>
+
+    <style name="checkBoxStyle" parent="Base.Theme.AppCompat">
+        <item name="colorAccent">#080808</item>
+        <item name="android:textColorSecondary">#7c7a7a</item>
+    </style>
+
+</resources>
