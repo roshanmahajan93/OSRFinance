@@ -78,8 +78,6 @@ public class CustomerDetailActivity extends Activity implements OnClickListener 
     int CardNo = 0;
     DatePickerDialog datePickerDialog;
     Calendar c;
-    
-
     Date datecurrent = new Date();
     Date dateButton = new Date();
     String data = "", decodeString = "";
