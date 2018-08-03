@@ -8,8 +8,10 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.design.widget.Snackbar;
 import android.util.Log;
 import android.view.View;
@@ -29,6 +31,7 @@ import com.example.chetu.osrfinance.Helper.DatabaseHelper;
 import com.example.chetu.osrfinance.Model.CustomerDetail;
 import com.example.chetu.osrfinance.Model.CustomerFinance;
 import com.example.chetu.osrfinance.R;
+import com.example.chetu.osrfinance.Service.CustomerReportPDF;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -42,6 +45,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
@@ -55,9 +59,10 @@ public class CustomerFinanceDetailActivity extends Activity {
     private LinearLayout mainLinear;
     ProgressDialog progress;
     public String rslt = "";
-
+    Button btn_share;
 
     private CustomerFinanceListAdapter customerFinanceListAdapter;
+    public CustomerReportPDF customerReportPDF;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,7 +71,7 @@ public class CustomerFinanceDetailActivity extends Activity {
         setContentView(R.layout.activity_customer_finance_detail);
 
         //DatabaseHelper.init(CustomerFinanceDetailActivity.this);
-
+        customerReportPDF = new CustomerReportPDF();
 
         Intent intent = getIntent();
         CardNo = "" + intent.getIntExtra("CardNo", 0);
@@ -80,6 +85,7 @@ public class CustomerFinanceDetailActivity extends Activity {
 
         mainLinear = (LinearLayout) findViewById(R.id.mainLinear);
 
+        btn_share = (Button) findViewById(R.id.btn_share);
         txt_card_no = (TextView) findViewById(R.id.txt_card_no);
         txt_CustName = (TextView) findViewById(R.id.txt_CustName);
         txt_ContactNo = (TextView) findViewById(R.id.txt_ContactNo);
@@ -98,6 +104,27 @@ public class CustomerFinanceDetailActivity extends Activity {
         list_view = (ListView) findViewById(R.id.list_view);
 
         PopUpDataBinding();
+
+        btn_share.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (customerReportPDF.write(CardNo, ln, CardNo, CustName, ContactNo, Amount, DailyAmt, AmtDate)) {
+                    File outputFile = new File(Environment.getExternalStorageDirectory() + "/OSRFinanceFile/", "PPR_" + CardNo + ".pdf");
+                    Uri uri = Uri.fromFile(outputFile);
+
+                    Intent share = new Intent();
+                    share.setAction(Intent.ACTION_SEND);
+                    share.setType("application/pdf");
+                    share.putExtra(Intent.EXTRA_STREAM, uri);
+                    share.setPackage("com.whatsapp");
+                    startActivity(share);
+                } else {
+                    Toast.makeText(CustomerFinanceDetailActivity.this, "File Not Created", Toast.LENGTH_LONG).show();
+                }
+
+
+            }
+        });
 
     }
 
@@ -258,4 +285,6 @@ public class CustomerFinanceDetailActivity extends Activity {
         list_view.setAdapter(customerFinanceListAdapter);
         customerFinanceListAdapter.notifyDataSetChanged();
     }
+
+
 }

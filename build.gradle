@@ -31,4 +31,6 @@ dependencies {
     compile 'org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2'
     compile files('libs/universal-image-loader-1.9.0.jar')
     compile 'com.android.volley:volley:1.0.0'
+    compile 'com.itextpdf:itextpdf:5.5.13'
+
 }

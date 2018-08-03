@@ -106,6 +106,7 @@ public class CustomerDetailActivity extends Activity implements OnClickListener 
     private Button btn_camera, btn_submit;
     private Bitmap bitmap;
     private Uri filePath;
+
     private int mYear, mMonth, mDay;
     private AlphaAnimation alphaAnimation;
     private SharedPreferences prefs;
